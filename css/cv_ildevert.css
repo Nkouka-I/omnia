@@ -1,0 +1,163 @@
+body {
+    background-color: #555;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cv_page {
+    width: 210mm;
+    height: 297mm; /* Hauteur fixe pour forcer le format A4 */
+    background: white;
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+/*------------------- Colonne gauche -------------------*/
+.cv_gauche {
+    background-color: var(--bg-secondary);
+    color: white;
+    padding: 30px 30px;
+}
+
+.cv_photo {
+    width: 190px;
+    height: 190px;
+    background: white;
+    border-radius: 40px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    border: 6px solid white;
+}
+
+.cv_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cv_aside h2 {
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    margin-top: 25px;
+    padding-bottom: 5px;
+}
+
+.cv_aside ul {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+/*------------------- Colonne droite -------------------*/
+.cv_main {
+    padding: 30px 30px;
+}
+
+.cv_header h1 {
+    font-size: 3em;
+    color: var(--bg-secondary);
+    line-height: 0.9;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.cv_header h2 {
+    font-size: 1.6em;
+    color: #555;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.cv_intro {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+}
+
+.cv_content_title {
+    color: #E30613;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #E30613;
+    margin: 30px 0 15px;
+}
+
+.cv_bloc { 
+    margin-bottom: 20px; 
+    line-height: 1.3em;
+}
+
+.cv_bloc_titre { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: baseline; 
+}
+
+.cv_date { 
+    color: #E30613; 
+    font-weight: bold; 
+    font-size: 0.85rem;
+    text-align: right; 
+}
+
+.cv_bloc ul {
+    flex-direction: column;
+    gap: 5px;
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+
+/*------------------- Impression PDF -------------------*/
+
+.btn_container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn_print {
+    padding: 12px 25px;
+    background-color: var(--bg-secondary);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn_print:hover {
+    background-color: var(--accent);
+    transform: scale(1.05);
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    body { 
+        background: none; 
+        margin: 0;
+        padding: 0; 
+    }
+    .cv_page { 
+        box-shadow: none; 
+        margin: 0; 
+    }
+    .cv_gauche { /*garde les couleurs*/
+        -webkit-print-color-adjust: exact; 
+        print-color-adjust: exact; 
+    }
+    .no_print {
+        display: none !important;
+    }
+}

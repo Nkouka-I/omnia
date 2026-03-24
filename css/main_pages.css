@@ -1,0 +1,304 @@
+/* ================= Accueil =================*/
+
+/* ------------------- Hero -------------------*/
+.hero .container {
+    max-width: 100%;    
+}
+
+.hero {
+    width: 100%;
+    height: 80vh; 
+    background-image: url('../assets/images/femme_court.jpg');
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    justify-content: center;
+    
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.4); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    color: var(--text-other); 
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    border: none;
+    text-shadow: 2px 2px 4px black;
+}
+
+.hero p {
+    color: var(--text-other);
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.theme {
+  display: inline-block;
+  background-color: #e8d7ce;
+  color: var(--bg-secondary);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: -20px;
+}
+
+@media (max-width: 768px) {
+  /* Réduction taille bannière Hero */
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+    padding: 0 10px;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+}
+
+/* ------------------- blocs -------------------*/
+
+.concept > .container > p {/* Description sous titre principal */
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #666;
+}
+
+
+#concept .container, #valeurs .container, #temoignages .container {/*pour les bulles de theme*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------------------- Temoignages -------------------*/
+
+.bloc_temoignage span {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--bg-secondary);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+/* ================= Omnis =================*/
+
+/* ------------------- Les patchs Omnis -------------------*/
+
+#patch .bloc {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#patch .img_bloc {
+    position: relative;
+    flex: 1;
+    max-width: 45%;
+}
+
+#patch .img_bloc img{
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+#patch .img_bloc figcaption {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    color: var(--text-other);
+    font-size: 0.7rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+#patch .bloc_text {
+    flex: 1;
+}
+
+.img_bloc ~ .bloc_text > p {
+    padding: 1.5em;
+    background-color: var(--text-other);
+    border-radius: 15px;
+}
+
+/* ------------------- Utilisateurs potentiels -------------------*/
+
+#users .bloc-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+/* ------------------- Comment placer votre Omnis -------------------*/
+
+#how_to_use {
+    padding: 2em 0;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+}
+
+#how_to_use ul {
+    margin-top: 50px;
+}
+
+#how_to_use li {
+    flex: 1;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    counter-increment: step-counter;
+    max-width: 15em;
+    margin: 0 auto;
+}
+
+#how_to_use li::before {/* Cercles avec numéros */
+    content: counter(step-counter);
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: var(--bg-secondary);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 8px rgba(165, 30, 25, 0.2);
+}
+
+#how_to_use li strong {
+    color: var(--bg-secondary);
+    margin-bottom: 5px;
+}
+
+/* ================= Partenaire =================*/
+
+/* ------------------- Map -------------------*/
+#map .bloc {
+    display: flex;
+    background: var(--text-other);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#map .img_bloc img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#map .container > p {
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+
+/* ------------------- Fromulaire Partenaire -------------------*/
+
+#partenaires .bloc {
+    display: flex;
+    gap: 60px;
+}
+
+#partenaires .bloc_text {
+    flex: 1;
+}
+
+#partenaires .bloc_text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#partenaires .bloc_form {
+    flex: 1;
+    background: var(--text-other);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#partenaires label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.temoignage {/*aussi utilisé dans index*/
+    background-color: var(--text-other);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid var(--bg-secondary);
+    font-style: italic;
+    margin-top: 30px;
+}
+
+.temoignage.hidden {
+    display: none !important;
+}
+
+.hidden {/* Cache le formulaire quand la classe est présente */
+    display: none !important;
+}
+
+.container_choix {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--bg-secondary);
+}
+
+.container_choix label {
+    color: var(--bg-secondary);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  #patch .bloc, #map .bloc, #partenaires .bloc {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #patch .img_bloc, #patch .bloc_text,#partenaires .bloc_text, #partenaires .bloc_form {
+    max-width: 100%;
+    flex: none;
+  }
+
+
+  #partenaires .bloc_form {
+    padding: 20px;
+  }
+
+  #how_to_use ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  #how_to_use li {
+    max-width: 100%;
+  }
+
+  #users .bloc-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,441 @@
+/* ================= équipe =================*/
+
+#equipe {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#equipe .title-underlined ~ p {
+    margin-bottom: 40px;
+}
+
+#equipe .bloc_container {
+    display: flex;
+    justify-content: center;
+    gap: 80px; 
+    flex-wrap: wrap;
+}
+
+#equipe .img_bloc img {
+    display: block;
+    transition: transform 0.3s;
+}
+
+#equipe .user_card:hover img {
+    transform: scale(1.05);
+}
+
+#equipe .user_card figcaption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 15em;
+}
+
+.cv-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--bg-secondary);
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 1px solid var(--bg-secondary);
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.cv-link:hover {
+    background-color: var(--bg-secondary);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    /* on réduit l'espace entre les membres */
+    #equipe .bloc_container {
+        gap: 30px; 
+    }
+
+    #equipe .user_card figcaption {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto 10px;
+    }
+
+    #equipe .img_bloc img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+}
+
+/* ================= Plan =================*/
+
+.map .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--text-other);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);;
+}
+
+.map h1 {
+    text-align: center;
+}
+
+
+.map h2 {
+    font-size: 1.4rem;
+    color: var(--bg-secondary);
+    margin-top: 30px;
+    border-left: 5px solid var(--bg-secondary);
+    padding-left: 15px;
+}
+
+.map ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.map ul li a {
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.map ul li a:hover {
+    color: var(--bg-secondary);
+    transform: translateX(10px);
+    font-weight: bold;
+}
+
+#nav_main {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+.map small {
+    display: inline;
+}
+
+@media screen and (max-width: 768px) {
+    .sitemap .container {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .map .container {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .map h2 {
+        font-size: 1.2rem;
+    }
+
+    .map ul li a {
+        font-size: 1rem;
+        padding: 5px 0;/* agrandissement zone clic */
+    }
+}
+
+/* ================= FAQ =================*/
+
+details {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+details[open] {
+    border-left: 4px solid var(--bg-secondary);
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+summary::-webkit-details-marker { display: none; }
+
+summary::after {
+    content: '+'; 
+    float: right; 
+    font-weight: bold;
+    color: var(--bg-secondary);
+}
+details[open] summary::after { content: '-'; }
+
+@media (max-width: 768px) {
+    button[type="submit"], .cv-link {
+        width: 100%;
+        display: block;
+        padding: 15px; /* agrandissement zone clic */
+    }
+}
+
+/* ================= légal =================*/
+
+.avertissement {
+    border: 2px solid #d9534f; 
+    background-color: #f9f2f4; 
+    padding: 15px; 
+    border-radius: 5px; 
+    color: #c7254e; 
+    margin-bottom: 25px;
+}
+
+#legal .container {
+    background-color: var(--text-other);
+    padding: 40px;
+    border-radius: 15px;
+    line-height: 1.8;
+}
+
+#legal h2 {
+    color: var(--bg-secondary);
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--bg-secondary);
+    padding-left: 15px;
+}
+
+#legal ul {
+    flex-direction: column;
+    gap: 0;
+    margin: 20px 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+@media (max-width: 768px) {
+    #legal .container {
+        padding: 20px;
+        width: 100%;
+    }
+    
+    #legal h1 {
+        font-size: 1.8rem;
+    }
+
+    #legal h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ================= Charte =================*/
+
+.charte-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.charte-section {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.charte-section h2 {
+    color: var(--bg-secondary);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--bg-main);
+    padding-bottom: 10px;
+}
+
+/* --- Section Concept du Logo --- */
+
+.logo-explanation {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.logo-display {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-text {
+    flex: 2;
+    line-height: 1.8;
+}
+
+/* --- icones --- */
+
+.ui-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo-preview {
+    background-color: var(--bg-secondary); 
+    padding: 40px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    gap: 25px;
+    justify-items: center;
+    align-items: center;
+}
+
+.logo-preview img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+/* --- Images --- */
+.image-gallery-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.image-link-card {
+    background: var(--text-other);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.img-wrapper {
+    height: 150px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.img-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.img-info span {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #555;
+    word-break: break-all;
+}
+
+.download-btn {
+    display: block;
+    text-align: center;
+    background: var(--bg-secondary);
+    color: white !important;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* --- PALETTE DE COULEURS --- */
+.swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.swatch-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.swatch-color {
+    height: 120px;
+    width: 100%;
+}
+
+.swatch-info {
+    padding: 15px;
+    background: #fff;
+    text-align: center;
+}
+
+.swatch-info span {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.swatch-info code {
+    font-weight: bold;
+    color: var(--text-main);
+    font-size: 1rem;
+}
+
+/* --- TYPOGRAPHIE --- */
+
+.typo-preview {
+    padding: 20px;
+    background: var(--bg-main);
+    border-radius: 12px;
+}
+
+.font-main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.big-abc {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--bg-secondary);
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .charte-section {
+        padding: 20px 15px;
+    }
+
+    /*2 colonnes maximum sur petit mobile */
+    .logo-preview {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+
+
+    .swatch-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .swatch-color {
+        height: 80px;
+    }
+}

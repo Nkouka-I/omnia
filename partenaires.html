@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>OMNIA ATHLETICA</title>
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/bot_top.css">
+		<link rel="stylesheet" href="css/main_pages.css">
+	</head>
+	<body>
+
+		<header></header>
+
+		<main>
+			<section id="map">
+				<div class="container">
+					<h1 class="title-underlined">Nos Points de Vente </h1>
+					<p> OMNIA ATHLETICA s’appuie sur un réseau de partenaires qui ne cesse de grandir. Notre produit est déjà déployées dans quelques villes principales, au sein de clubs de sport ou encore de cabinets médicaux qui s'engagent dans une pratique plus sûre et plus performante pour tous. Nos produits sont proposés dans des magasins de sport spécialisés afin de faciliter leur accès au grand public et en quantité adaptée dans le cadre de partenariats.</p>
+					<div class="bloc">
+						<div class="img_bloc">
+							<img src="assets/images/map_france.png" alt="Carte de la france">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="line"></div>
+
+			<section id="partenaires">
+				<div class="container">
+					<div class="bloc">
+						<div class="bloc_text">
+							<h2>Devenir Partenaire</h2>
+							<p>Vous gérez une <strong>structure sportive</strong>, un <strong>cabinet de kinésithérapie</strong> ou autre ?
+							<br> OMNIA ATHLETICA recherche des partenaires <strong>passionnés</strong> par l’innovation et tournés vers l’<strong>avenir</strong> afin d’étendre son réseau.</p>
+							<p class="temoignage">"Depuis que nous avons adopté les capteurs Omnia dans notre club à Lyon, les adhérents s’entraînant sans coach personnel bénéficient d’un meilleur accompagnement. Leur satisfaction a fortement augmenté et le nombre de blessures sur les machines a drastiquement diminué."</p>
+
+							<p class="hidden">Vous gérez une <strong>Boutique spécialisée</strong> dans le <strong>sport</strong> ou la <strong>santé</strong> ?
+							<br> OMNIA ATHLETICA recherche des partenaires <strong>passionnés</strong> par l’innovation et tournés vers l’<strong>avenir</strong> afin d’étendre son réseau.</p>
+							<p class="hidden temoignage">"Les patchs OMNIS ont suscité un réel intérêt auprès de nos clients. La clarté du concept et l’accompagnement proposé facilitent la compréhension du produit et renforcent la confiance lors de l’achat."</p>
+						</div>
+						<div class="bloc_form">
+							<div class="container_choix">
+						        <label for="type_formulaire">Vous souhaitez :</label>
+						        <select id="type_formulaire">
+						            <option value="autres">Utiliser notre produit (Kiné, Club, etc.)</option>
+						            <option value="magasin">Vendre notre produit (Boutique spécialisé)</option>
+						        </select>
+						    </div>
+
+						    <form action="#" method="post" id="form_autres">
+						        <div>
+						            <label for="nom">Nom complet : *</label>
+						            <input type="text" id="nom" name="nom" 
+						            placeholder="Votre nom"
+						            minlength="2" maxlength="50"
+						            pattern="^[A-Za-zÀ-ÿ\s\-]+$"
+						            title="Le nom ne doit contenir que des lettres" required>
+						        </div>
+						        <div>
+						            <label for="email">Email : *</label>
+						            <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
+						        </div>
+						        <div>
+						            <label for="phone">Téléphone :</label>
+						            <input type="tel" id="phone" name="phone" 
+						            placeholder="06 07 08 09 10"
+						            pattern="^((\+)33|0)[1-9](\d{2}){4}$"
+						            title="Format attendu : 0612345678 ou +33612345678">
+						        </div>
+						        <div>
+						            <label for="statut">Vous êtes :</label>
+						            <select id="statut" name="statut" required>
+						                <option value="" disabled selected>--Veuillez choisir un statut--</option>
+						                <option value="pro">Professionnel de Santé (Kiné, Médecin..)</option>
+						                <option value="club">Club / Structure Sportive</option>
+						                <option value="influenceur">Influenceur</option>
+						                <option value="autre">Autre</option>
+						            </select>
+						        </div>
+						        <div>
+						            <label for="message">Votre projet : *</label>
+						            <textarea id="message" name="message" rows="6" 
+						            placeholder="Expliquez-nous votre structure et votre projet en quelques lignes..." 
+						            minlength="20" 
+                					maxlength="2000" required></textarea>
+						        </div>
+						        <button type="submit">Envoyer ma demande</button>
+						    </form>
+
+						    <form action="#" method="post" id="form_magasin" class="hidden">
+						        <div>
+						            <label for="nom_magasin">Nom de l'enseigne : *</label>
+						            <input type="text" id="nom_magasin" name="nom_magasin" placeholder="Ex: Sport 2000 Lyon" required>
+						        </div>
+						        <div>
+						            <label for="ville_magasin">Ville : *</label>
+						            <input type="text" id="ville_magasin" name="ville_magasin" placeholder="Ex: Evry"
+						            minlength="2"
+						            maxlength="50"
+						            pattern="^[A-Za-zÀ-ÿ\s\-]+$"
+						            title="La ville ne doit contenir que des lettres" required>
+						        </div>
+						        <div>
+								    <label for="code_postal">Code Postal : *</label>
+								    <input type="text" id="code_postal" name="code_postal" 
+						            placeholder="Ex: 91000" 
+						            pattern="[0-9]{5}" 
+						            maxlength="5"
+						            title="Le code postal doit contenir exactement 5 chiffres" required>
+								</div>
+						        <div>
+						            <label for="email_magasin">Email de contact : *</label>
+						            <input type="email" id="email_magasin" name="email_magasin" placeholder="contact@magasin.com"
+						            minlength="5" 
+						            maxlength="50" required>
+						        </div>
+						        <div>
+						            <label for="stock">Estimation du stock souhaité :</label>
+						            <select id="stock" name="stock">
+						                <option value="petit">Petit (10-50 unités)</option>
+						                <option value="moyen">Moyen (50-200 unités)</option>
+						                <option value="grand">Grand (+200 unités)</option>
+						            </select>
+						        </div>
+						        <button type="submit">Devenir revendeur</button>
+						    </form>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+		</main>
+
+		<footer></footer>
+
+		<button id="Top" title="Retour en haut">
+	 		<img src="assets/icones/top.png" alt="Haut">
+		</button>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>

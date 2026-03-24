@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amine Abbaz">
+    <title>CV - Amine Abbaz</title>
+
+<style>
+        /* --- STYLE SPÉCIFIQUE AU CV (Intégré ici pour éviter les erreurs) --- */
+        
+        .cv-wrapper {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Colonne gauche petite, droite grande */
+            gap: 40px;
+            border-radius: 8px;
+            color: #333;
+        }
+
+        /* COLONNE GAUCHE (Infos) */
+        .cv-sidebar {
+            border-right: 2px solid #f4f4f4;
+            padding-right: 20px;
+            text-align: center; /* Centrer la photo et infos */
+        }
+
+        .cv-photo {
+            width: 160px;
+            height: 160px;
+            object-fit: cover; /* Recadre l'image proprement */
+            border-radius: 50%; /* Rond */
+            border: 4px solid #b30000; /* Rouge Omnia */
+            margin-bottom: 20px;
+        }
+
+        .cv-contact-info {
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .cv-contact-info p {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cv-skills ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .cv-skills li {
+            background: #f4f4f4;
+            padding: 8px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* COLONNE DROITE (Expérience) */
+        .cv-main header {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #b30000;
+            padding-bottom: 20px;
+        }
+
+        .cv-main h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: #b30000; /* Rouge Omnia */
+            text-transform: uppercase;
+        }
+
+        .cv-subtitle {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .cv-intro {
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .cv-section {
+            margin-bottom: 30px;
+        }
+
+        .cv-section h3 {
+            font-size: 1.3rem;
+            color: #b30000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            border-left: 4px solid #b30000;
+            padding-left: 10px;
+        }
+
+        .job-item {
+            margin-bottom: 20px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .job-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        /* RESPONSIVE MOBILE */
+        @media screen and (max-width: 768px) {
+            .cv-wrapper {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            .cv-sidebar {
+                border-right: none;
+                border-bottom: 2px solid #eee;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* --- IMPRESSION (C'est là que tu gagnes les points) --- */
+        @media print {
+            /* On cache tout le site autour */
+            body > header, body > footer, nav, .print-btn {
+                display: none !important;
+            }
+
+            body {
+                background: white !important;
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            .cv-wrapper {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                border: none;
+            }
+
+            /* On remet les couleurs en noir pour l'encre */
+            .cv-main h1, .cv-section h3, .cv-photo {
+                color: black !important;
+                border-color: black !important;
+            }
+
+            a { text-decoration: none; color: black; }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div style="text-align: center; margin: 20px 0;" class="print-btn">
+            <button onclick="window.print()" style="padding: 10px 20px; background: #333; color: white; border: none; cursor: pointer; border-radius: 4px;">
+                🖨️ Imprimer le CV
+            </button>
+        </div>
+
+        <div class="cv-wrapper">
+            <aside class="cv-sidebar">
+                <img src="assets/images/photo_amine.png" alt="Amine Abbaz" class="cv-photo">
+                
+                <div class="cv-contact-info">
+                    <p>📍 91800 Brunoy</p>
+                    <p>📞 06 98 31 63 69</p>
+                    <p>📧 mnabbaz@gmail.com</p>
+                    <p>🚗 Permis B + Véhicule</p>
+                    <p>🔗 in/amineabbaz</p>
+                </div>
+
+                <div class="cv-section cv-skills">
+                    <h3>Compétences</h3>
+                    <ul>
+                        <li>SQL / Langage C</li>
+                        <li>Pack LibreOffice</li>
+                        <li>Sérieux & Organisé</li>
+                        <li>Sens du relationnel</li>
+                    </ul>
+                </div>
+
+                <div class="cv-section cv-skills">
+                    <h3>Langues</h3>
+                    <ul>
+                        <li><strong>Espagnol :</strong> B2 (Pro)</li>
+                        <li><strong>Anglais :</strong> B1</li>
+                    </ul>
+                </div>
+
+                <div class="cv-section cv-skills">
+                    <h3>Intérêts</h3>
+                    <ul>
+                        <li>Football (Régional)</li>
+                        <li>Voyages</li>
+                        <li>Lecture</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div class="cv-main">
+                <header>
+                    <h1>Amine ABBAZ</h1>
+                    <div class="cv-subtitle">Étudiant BUT Informatique</div>
+                    <p class="cv-intro">
+                        Sérieux, organisé et motivé. Je recherche une <strong>alternance pour septembre 2026</strong>.
+                    </p>
+                </header>
+
+                <div class="cv-section">
+                    <h3>Formations</h3>
+                    <div class="job-item">
+                        <div class="job-title">BUT Informatique (1ère année)</div>
+                        <div class="job-date">2024 - Présent | IUT de Fontainebleau</div>
+                    </div>
+                    <div class="job-item">
+                        <div class="job-title">Baccalauréat Général</div>
+                        <div class="job-date">2024 | Lycée Talma, Brunoy</div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Expériences</h3>
+                    
+                    <div class="job-item">
+                        <div class="job-title">Préparateur de commande (Intérim)</div>
+                        <div class="job-date">2025 | Adequat, Réau</div>
+                    </div>
+
+                    <div class="job-item">
+                        <div class="job-title">Vendeur sur marché familial</div>
+                        <div class="job-date">2024 | Vitry-sur-Seine</div>
+                        <p style="font-size: 0.9rem; margin: 0;">Mise en place, accueil client, encaissement.</p>
+                    </div>
+
+                    <div class="job-item">
+                        <div class="job-title">Bénévole Associatif</div>
+                        <div class="job-date">2023 | "Au cœur du partage"</div>
+                        <p style="font-size: 0.9rem; margin: 0;">Collectes et maraudes pour les personnes dans le besoin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

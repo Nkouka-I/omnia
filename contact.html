@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Groupe 4 - Abbaz & Nkouka">
+    <title>Contact - Omnia Athletica</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/bot_top.css">
+    <link rel="stylesheet" href="css/second_pages.css">
+</head>
+<body>
+ 
+    <header></header>
+
+    <main>
+        <section id = "Contact">
+            <div class="container">
+                <h1 class="title-underlined">Contactez l'équipe Omnia</h1>
+                <p><strong>Une question, un besoin d’information ou une demande spécifique ?</strong><br>L’équipe OMNIA ATHLETICA est à votre écoute pour répondre à vos questions et vous accompagner. <br>N’hésitez pas à nous contacter via le formulaire ci-dessous.</p>
+
+                <form action="#" method="post">
+                    <div>
+                        <label for="nom">Nom : *</label>
+                        <input type="text" id="nom" name="nom"
+                        minlength="2" maxlength="50"
+                        pattern="^[A-Za-zÀ-ÿ\s\-]+$"
+                        title="Le nom ne doit contenir que des lettres" 
+                        placeholder="Votre nom" required>
+                    </div>
+
+                    <div>
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom" 
+                        minlength="2" maxlength="50"
+                        pattern="^[A-Za-zÀ-ÿ\s\-]+$"
+                        title="Le prénom ne doit contenir que des lettres" 
+                        placeholder="Votre prénom">
+                    </div>
+
+                    <div>
+                        <label for="email">Email : *</label>
+                        <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
+                    </div>
+
+                    <div>
+                        <label for="objet">Objet de la demande</label>
+                        <select id="objet" name="objet">
+                            <option>Information sur le produit</option>
+                            <option>Application OMNIA App</option>
+                            <option>Problème technique</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="6" 
+                        placeholder="Expliquez-nous votre structure et votre projet en quelques lignes..." 
+                        minlength="20" 
+                        maxlength="2000" required></textarea>
+                    </div>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+        <button id="Top" title="Retour en haut">
+            <img src="assets/icones/top.png" alt="Haut">
+        </button>
+
+        <script src="js/main.js"></script>
+
+</body>
+</html>
